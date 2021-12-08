@@ -4,7 +4,7 @@ networks:
 
 services:
   front:
-    image: ""
+    image: ghcr.io/corona-travel/ctf:latest
     networks:
       - frontend
     ports:
