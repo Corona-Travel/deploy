@@ -25,7 +25,6 @@ db.places.insert({
   place_id: "ca",
   pos: [149.12383, -35.27583],
 });
-db.places.insert({ name: "Baku", place_id: "bak", pos: [49.86683, 40.3905] });
 db.places.insert({
   name: "Vienna",
   place_id: "vien",
@@ -36,7 +35,11 @@ db.places.insert({
   place_id: "buen",
   pos: [-58.369523, -34.603625],
 });
-db.places.insert({ name: "Minsk", place_id: "minsk", pos: [4.3525, 50.8467] });
+db.places.insert({ 
+    name: "Minsk", 
+    place_id: "minsk", 
+    pos: [4.3525, 50.8467],
+ });
 db.places.insert({
   name: "Brussel",
   place_id: "brussel",
@@ -52,47 +55,111 @@ db.places.insert({
     place_id: "baku",
     pos: [49.868760, 40.401940],  
   });
-  db.places.insert({
+db.places.insert({
     name: "Kabul",
     place_id: "kabul",
     pos: [69.207486, 34.5553494], 
   });
-  db.places.insert({
+db.places.insert({
     name: "Tirana",
     place_id: "tirana",
     pos: [19.8186982, 41.3275459], 
   });
-  db.places.insert({
+db.places.insert({
     name: "Algiers",
     place_id: "algiers",
     pos: [3.0876732, 36.7312661], 
   });
-  db.places.insert({
+db.places.insert({
     name: "Andorra la Vella",
     place_id: "andorra la vella",
     pos: [1.521835, 42.506317], 
   });
-  db.places.insert({
+db.places.insert({
     name: "Luanda",
     place_id: "luanda",
     pos: [13.2301756, -8.8146556], 
   });
-  db.places.insert({
+db.places.insert({
     name: "Yerevan",
     place_id: "yerevan",
     pos: [44.515209, 40.1872023], 
   });
-  db.places.insert({
+db.places.insert({
     name: "Ottawa",
     place_id: "ottawa",
     pos: [-75.6971931, 45.4215296], 
   });
-  db.places.insert({
+db.places.insert({
     name: "Beijing",
     place_id: "beijing",
     pos: [116.407395, 39.904211], 
   });
-
+db.places.insert({
+    name: "Zagreb",
+    place_id: "zagreb",
+    pos: [15.9819189, 45.8150108], 
+  });
+db.places.insert({
+    name: "Prague",
+    place_id: "prague",
+    pos: [14.4378005, 50.0755381], 
+  });
+db.places.insert({
+    name: "Copenhagen",
+    place_id: "copenhagen",
+    pos: [12.5683372, 55.6760968], 
+  });
+db.places.insert({
+    name: "London",
+    place_id: "london",
+    pos: [-0.1275862, 51.5072178],
+  });
+db.places.insert({
+    name: "Helsinki",
+    place_id: "helsinki",
+    pos: [24.9383791, 60.1698557],
+  });
+db.places.insert({
+    name: "Paris",
+    place_id: "paris",
+    pos: [2.3522219, 48.856614],
+  });
+db.places.insert({
+    name: "Tbilisi",
+    place_id: "tbilisi",
+    pos: [44.827096, 41.7151377], 
+  });
+db.places.insert({
+    name: "Berlin",
+    place_id: "berlin",
+    pos: [13.404954, 52.5200066], 
+  });
+db.places.insert({
+    name: "Budapest",
+    place_id: "budapest",
+    pos: [19.040235, 47.497912], 
+  });
+db.places.insert({
+    name: "Tokyo",
+    place_id: "tokyo",
+    pos: [139.7690174, 35.6803997],
+  });
+db.places.insert({
+    name: "Bishkek",
+    place_id: "bishkek",
+    pos: [74.5697617, 42.8746212],
+  });
+db.places.insert({
+    name: "Riga",
+    place_id: "riga",
+    pos: [24.1051865, 56.9496487],
+  });
+db.places.insert({
+    name: "Oslo",
+    place_id: "oslo",
+    pos: [10.7522454, 59.9138688], 
+  });
 
 
 //factsearhcer
