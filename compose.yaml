@@ -46,5 +46,37 @@ services:
     ports:
       - 12341:1234
 
+  media:
+    image: ghcr.io/corona-travel/media:latest
+    command: uvicorn --host 0.0.0.0 --port 1234 media.app:app --root-path /media
+    environment:
+      MONGO_URL: mongodb://mongo/corona_travel
+      LOG_LEVEL: DEBUG
+    networks:
+      - backend
+    ports:
+      - 12342:1234
+
+  places:
+    image: ghcr.io/corona-travel/places:latest
+    command: uvicorn --host 0.0.0.0 --port 1234 places.app:app --root-path /places
+    environment:
+      MONGO_URL: mongodb://mongo/corona_travel
+      LOG_LEVEL: DEBUG
+    networks:
+      - backend
+    ports:
+      - 12343:1234
+
+  quizes:
+    image: ghcr.io/corona-travel/quizes:latest
+    command: uvicorn --host 0.0.0.0 --port 1234 quizes.app:app --root-path /quizes
+    environment:
+      MONGO_URL: mongodb://mongo/corona_travel
+      LOG_LEVEL: DEBUG
+    networks:
+      - backend
+    ports:
+      - 12344:1234
 
 
