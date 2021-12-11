@@ -68,9 +68,9 @@ services:
     ports:
       - 12343:1234
 
-  quizes:
-    image: ghcr.io/corona-travel/quizes:latest
-    command: uvicorn --host 0.0.0.0 --port 1234 quizes.app:app --root-path /quizes
+  quizzes:
+    image: ghcr.io/corona-travel/quizzes:latest
+    command: uvicorn --host 0.0.0.0 --port 1234 quizzes.app:app --root-path /quizzes
     environment:
       MONGO_URL: mongodb://mongo/corona_travel
       LOG_LEVEL: DEBUG
