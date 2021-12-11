@@ -34,7 +34,7 @@ db.places.insert({
 db.places.insert({
   name: "Buenos Aires",
   place_id: "buen",
-  pos: [-58.369523, 34.603625],
+  pos: [-58.369523, -34.603625],
 });
 db.places.insert({ name: "Minsk", place_id: "minsk", pos: [4.3525, 50.8467] });
 db.places.insert({
@@ -47,6 +47,54 @@ db.places.insert({
   place_id: "sofia",
   pos: [23.323177, 42.699368],
 });
+db.places.insert({
+    name: "Baku",
+    place_id: "baku",
+    pos: [49.868760, 40.401940],  
+  });
+  db.places.insert({
+    name: "Kabul",
+    place_id: "kabul",
+    pos: [69.207486, 34.5553494], 
+  });
+  db.places.insert({
+    name: "Tirana",
+    place_id: "tirana",
+    pos: [19.8186982, 41.3275459], 
+  });
+  db.places.insert({
+    name: "Algiers",
+    place_id: "algiers",
+    pos: [3.0876732, 36.7312661], 
+  });
+  db.places.insert({
+    name: "Andorra la Vella",
+    place_id: "andorra la vella",
+    pos: [1.521835, 42.506317], 
+  });
+  db.places.insert({
+    name: "Luanda",
+    place_id: "luanda",
+    pos: [13.2301756, -8.8146556], 
+  });
+  db.places.insert({
+    name: "Yerevan",
+    place_id: "yerevan",
+    pos: [44.515209, 40.1872023], 
+  });
+  db.places.insert({
+    name: "Ottawa",
+    place_id: "ottawa",
+    pos: [-75.6971931, 45.4215296], 
+  });
+  db.places.insert({
+    name: "Beijing",
+    place_id: "beijing",
+    pos: [116.407395, 39.904211], 
+  });
+
+
+
 //factsearhcer
 db.facts.createIndex({ pos: "2dsphere" });
 db.facts.insert({
