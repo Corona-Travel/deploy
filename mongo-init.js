@@ -1,6 +1,10 @@
 db = db.getSiblingDB("corona_travel")
 
+// сначала lng, потом lat
+// <field>: [<longitude>, <latitude>]
+
 // db.place.createIndex({ place_id: 1 }, { unique: true })
+db.places.createIndex( { pos: "2dsphere" } )
 db.places.insert({ name: "Moscow", place_id: "moscow", pos: [55.749792, 37.632495] })
 db.places.insert({ name: "Madrid", place_id: "madrid", pos: [40.416775, -3.703790] })
 db.places.insert({ name: "New York", place_id: "ny", pos: [40.730610, -73.935242] })
@@ -9,9 +13,10 @@ db.places.insert({ name: "Baku", place_id: "bak", pos: [40.3905, 49.86683] })
 db.places.insert({ name: "Vienna", place_id: "vien", pos: [48.184517, 16.311865] })
 db.places.insert({ name: "Buenos Aires", place_id: "buen", pos: [34.603625,-58.369523] })
 db.places.insert({ name: "Minsk", place_id: "minsk", pos: [50.8467, 4.3525] })
-db.facts.insert({ name: "Brussel", place_id: "brussel", pos: [50.8467, 4.3525] })
+db.places.insert({ name: "Brussel", place_id: "brussel", pos: [50.8467, 4.3525] })
 db.places.insert({ name: "Sofia", place_id: "sofia", pos: [42.699368, 23.323177] })
 
+db.facts.createIndex( { pos: "2dsphere" } )
 db.facts.insert({ name: "Req Square", description: "Red Square was built in 16-th century", fact_id: "moscow_red_sqr", pos: [55.7446371, 37.5967391] })
 db.facts.insert({ name: "Christ the Saviour Cathedral", description: "The most important and the lergest cathedral in Russia", fact_id: "moscow_chr_sav_cath", pos: [55.7446375,37.6054939] })
 db.facts.insert({ name: "Tretyakov Gallery", description: "The Tretyakov Gallery is home to 170,000 art works ranging from the 11th to the 20th century", fact_id: "moscow_tret_gall", pos: [55.741389,37.6208639] })
@@ -25,6 +30,7 @@ db.facts.insert({ name: "GUM", description: "The famous GUM is a large shopping 
 db.facts.insert({ name: "Kitay-gorod", description: "Kitay-Gorod is a large historical district of the capital, which existed since the 16th century", fact_id: "moscow_kitay", pos: [55.7521239,37.6211384] })
 db.facts.insert({ name: "Zaryadye park", description: "The park's most-visited attraction is the Soaring Bridge - a 70-meter-high console with no support structures soaring over the embankment and the Moskva River at an altitude of 15 metres", fact_id: "moscow_zaryadye", pos: [55.7514578,37.6287988] })
 
+db.facts.createIndex( { pos: "2dsphere" } )
 db.facts.insert({ name: "Manhattan", description: "Manhattan is historical center on NY", fact_id: "ny_manh", pos: [40.730610, -73.935242] })
 db.facts.insert({ name: "The Royal Palace of Madrid", description: "The Royal Palace of Madrid is the official residence of the Spanish royal family at the city of Madrid, although now used only for state ceremonies", fact_id: "madrid_palace", pos: [40.417953, -3.714312] })
 db.facts.insert({ name: "City Hill", description: "City Hill is a five hectare landscaped hill located in the centre of Canberra and surrounded by Vernon Circle", fact_id: "city_hill_Canberra", pos: [-35.27583, 149.12383] })
@@ -35,6 +41,7 @@ db.facts.insert({ name: "Belarusian National Arts Museum", description: "The Nat
 db.facts.insert({ name: "The Grand-Place", description: "The Grand-Place is the central square of the City of Brussels", fact_id: "gr_pal", pos: [50.8467, 4.3525] })
 db.facts.insert({ name: "Sofia History Museum", description: "The Sofia History Museum is housed in the former building of the Central Mineral Baths and is devoted to ethnography, archaeology, economy, and cultural life in Sofia and its region", fact_id: "shm", pos: [42.699368, 23.323177] })
 
+db.quizzes.createIndex( { pos: "2dsphere" } )
 db.quizzes.insert({quiz_id: "1", name: "Moscow center", questions_with_answer: [{task: "When  was the beginning of the period of the new heyday of the Red Square?", answers: [{option: "12th century", correct: false}, {option: "19th century", correct: true}, {option: "20th century", correct: false}]}], pos: [55.7539303, 37.620795] })
 db.quizzes.insert({quiz_id: "2", name: "Moscow center", questions_with_answer: [{task: "When was Lenin's Mausoleum at Red Square opened?", answers: [{option: "it is not a Mausoleum", correct: false}, {option: "1930", correct: true}, {option: "1941", correct: false}]}], pos: [55.7541605,37.6196817] })
 db.quizzes.insert({quiz_id: "3", name: "Moscow center", questions_with_answer: [{task: "What is GUM famous for among the tourists?", answers: [{option: "clothes", correct: false}, {option: "height of the building", correct: false}, {option: "ice cream", correct: true}]}], pos: [55.754499,37.621041] })
