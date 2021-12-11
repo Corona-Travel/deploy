@@ -7,6 +7,7 @@ services:
     image: ghcr.io/corona-travel/ctf:latest
     networks:
       - frontend
+      - backend
     ports:
       - 80:3000
 
@@ -43,8 +44,6 @@ services:
       LOG_LEVEL: DEBUG
     networks:
       - backend
-    ports:
-      - 12341:1234
 
   media:
     image: ghcr.io/corona-travel/media:latest
@@ -54,8 +53,6 @@ services:
       LOG_LEVEL: DEBUG
     networks:
       - backend
-    ports:
-      - 12342:1234
 
   places:
     image: ghcr.io/corona-travel/places:latest
@@ -65,8 +62,6 @@ services:
       LOG_LEVEL: DEBUG
     networks:
       - backend
-    ports:
-      - 12343:1234
 
   quizzes:
     image: ghcr.io/corona-travel/quizzes:latest
@@ -76,7 +71,5 @@ services:
       LOG_LEVEL: DEBUG
     networks:
       - backend
-    ports:
-      - 12344:1234
 
 
