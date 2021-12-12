@@ -8,157 +8,157 @@ db.places.createIndex({ pos: "2dsphere" });
 db.places.insert({
   name: "Moscow",
   place_id: "moscow",
-  pos: [37.6195977, 55.7544836],
+  pos: {type: "Point", coordinates: [37.6195977, 55.7544836]},
 });
 db.places.insert({
   name: "Madrid",
   place_id: "madrid",
-  pos: [-3.70379, 40.416775],
+  pos: {type: "Point", coordinates: [-3.70379, 40.416775]},
 });
 db.places.insert({
   name: "New York",
   place_id: "ny",
-  pos: [-73.935242, 40.73061],
+  pos: {type: "Point", coordinates: [-73.935242, 40.73061]},
 });
 db.places.insert({
   name: "Canberra",
   place_id: "ca",
-  pos: [149.12383, -35.27583],
+  pos: {type: "Point", coordinates: [149.12383, -35.27583]},
 });
 db.places.insert({
   name: "Vienna",
   place_id: "vien",
-  pos: [16.311865, 48.184517],
+  pos: {type: "Point", coordinates: [16.311865, 48.184517]},
 });
 db.places.insert({
   name: "Buenos Aires",
   place_id: "buen",
-  pos: [-58.369523, -34.603625],
+  pos: {type: "Point", coordinates: [-58.369523, -34.603625]},
 });
 db.places.insert({ 
     name: "Minsk", 
     place_id: "minsk", 
-    pos: [4.3525, 50.8467],
+    pos: {type: "Point", coordinates: [27.558972, 53.9006011]},
  });
 db.places.insert({
   name: "Brussel",
   place_id: "brussel",
-  pos: [4.3525, 50.8467],
+  pos: {type: "Point", coordinates: [4.3571696, 50.8476424]},
 });
 db.places.insert({
   name: "Sofia",
   place_id: "sofia",
-  pos: [23.323177, 42.699368],
+  pos: {type: "Point", coordinates: [23.323177, 42.699368]}, 
 });
 db.places.insert({
     name: "Baku",
     place_id: "baku",
-    pos: [49.868760, 40.401940],  
+    pos: {type: "Point", coordinates: [49.868760, 40.401940]}, 
   });
 db.places.insert({
     name: "Kabul",
     place_id: "kabul",
-    pos: [69.207486, 34.5553494], 
+    pos: {type: "Point", coordinates: [69.207486, 34.5553494]},
   });
 db.places.insert({
     name: "Tirana",
     place_id: "tirana",
-    pos: [19.8186982, 41.3275459], 
+    pos: {type: "Point", coordinates: [19.8186982, 41.3275459]},
   });
 db.places.insert({
     name: "Algiers",
     place_id: "algiers",
-    pos: [3.0876732, 36.7312661], 
+    pos: {type: "Point", coordinates: [3.0876732, 36.7312661]},
   });
 db.places.insert({
     name: "Andorra la Vella",
     place_id: "andorra la vella",
-    pos: [1.521835, 42.506317], 
+    pos: {type: "Point", coordinates: [1.521835, 42.506317]}, 
   });
 db.places.insert({
     name: "Luanda",
     place_id: "luanda",
-    pos: [13.2301756, -8.8146556], 
+    pos: {type: "Point", coordinates: [13.2301756, -8.8146556]},
   });
 db.places.insert({
     name: "Yerevan",
     place_id: "yerevan",
-    pos: [44.515209, 40.1872023], 
+    pos: {type: "Point", coordinates: [44.515209, 40.1872023]},
   });
 db.places.insert({
     name: "Ottawa",
     place_id: "ottawa",
-    pos: [-75.6971931, 45.4215296], 
+    pos: {type: "Point", coordinates: [-75.6971931, 45.4215296]}, 
   });
 db.places.insert({
     name: "Beijing",
     place_id: "beijing",
-    pos: [116.407395, 39.904211], 
+    pos: {type: "Point", coordinates: [116.407395, 39.904211]}, 
   });
 db.places.insert({
     name: "Zagreb",
     place_id: "zagreb",
-    pos: [15.9819189, 45.8150108], 
+    pos: {type: "Point", coordinates: [15.9819189, 45.8150108]},
   });
 db.places.insert({
     name: "Prague",
     place_id: "prague",
-    pos: [14.4378005, 50.0755381], 
+    pos: {type: "Point", coordinates: [14.4378005, 50.0755381]}, 
   });
 db.places.insert({
     name: "Copenhagen",
     place_id: "copenhagen",
-    pos: [12.5683372, 55.6760968], 
+    pos: {type: "Point", coordinates: [12.5683372, 55.6760968]},
   });
 db.places.insert({
     name: "London",
     place_id: "london",
-    pos: [-0.1275862, 51.5072178],
+    pos: {type: "Point", coordinates: [-0.1275862, 51.5072178]},
   });
 db.places.insert({
     name: "Helsinki",
     place_id: "helsinki",
-    pos: [24.9383791, 60.1698557],
+    pos: {type: "Point", coordinates: [24.9383791, 60.1698557]},
   });
 db.places.insert({
     name: "Paris",
     place_id: "paris",
-    pos: [2.3522219, 48.856614],
+    pos: {type: "Point", coordinates: [2.3522219, 48.856614]},
   });
 db.places.insert({
     name: "Tbilisi",
     place_id: "tbilisi",
-    pos: [44.827096, 41.7151377], 
+    pos: {type: "Point", coordinates: [44.827096, 41.7151377]},
   });
 db.places.insert({
     name: "Berlin",
     place_id: "berlin",
-    pos: [13.404954, 52.5200066], 
+    pos: {type: "Point", coordinates: [13.404954, 52.5200066]}, 
   });
 db.places.insert({
     name: "Budapest",
     place_id: "budapest",
-    pos: [19.040235, 47.497912], 
+    pos: {type: "Point", coordinates: [19.040235, 47.4979127]}, 
   });
 db.places.insert({
     name: "Tokyo",
     place_id: "tokyo",
-    pos: [139.7690174, 35.6803997],
+    pos: {type: "Point", coordinates: [139.7690174, 35.6803997]},
   });
 db.places.insert({
     name: "Bishkek",
     place_id: "bishkek",
-    pos: [74.5697617, 42.8746212],
+    pos: {type: "Point", coordinates: [74.5697617, 42.8746212]},
   });
 db.places.insert({
     name: "Riga",
     place_id: "riga",
-    pos: [24.1051865, 56.9496487],
+    pos: {type: "Point", coordinates: [24.1051865, 56.9496487]},
   });
 db.places.insert({
     name: "Oslo",
     place_id: "oslo",
-    pos: [10.7522454, 59.9138688], 
+    pos: {type: "Point", coordinates: [10.7522454, 59.9138688]}, 
   });
 
 
@@ -244,6 +244,7 @@ db.facts.insert({
   fact_id: "moscow_zaryadye",
   pos: {type: "Point", coordinates: [37.6287988, 55.7514578]},
 });
+
 //factsearcher
 db.facts.createIndex({ pos: "2dsphere" });
 db.facts.insert({
@@ -354,5 +355,13 @@ db.quizzes.insert({
       ],
     },
   ],
-  pos: [37.620795, 55.7539303],
+  pos: {type: "Point", coordinates: [37.620795, 55.7539303]},
 });
+
+
+// media
+db.media.createIndex({ pos: "2dsphere" });
+db.media.insert({name: "Red Square", type: "photo", pos: {type: "Point", coordinates: [37.5967391, 55.7446371]}, url: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.lonelyplanet.com%2Farticles%2Fmoscow-e2-80-99s-red-square&psig=AOvVaw0mznzK4RolAkwM1p7E5cE_&ust=1639402766684000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOii77Cx3vQCFQAAAAAdAAAAABAS"})
+db.media.insert({name: "GUM", type: "photo", pos: {type: "Point", coordinates: [37.6215216, 55.7546967]}, url: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fgum.ru%2Fnews%2F7721635%2F15.06.2020%2F&psig=AOvVaw2Ezg_5YJ2dweQbZgzdHVHW&ust=1639402989493000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJDYh5qy3vQCFQAAAAAdAAAAABAD"})
+db.media.insert({name: "Red Square", type: "video", pos: {type: "Point", coordinates: [37.5967392, 55.7446371]}, url: "https://www.youtube.com/watch?v=jCcd_96P5BA"})
+db.media.insert({name: "GUM", type: "video", pos: {type: "Point", coordinates: [37.6215215, 55.7546967]}, url: "https://www.youtube.com/watch?v=GfwnH3ccEnc"})
