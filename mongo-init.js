@@ -3,7 +3,7 @@ db = db.getSiblingDB("corona_travel");
 // сначала lng, потом lat
 // <field>: [<longitude>, <latitude>]
 
-// db.place.createIndex({ place_id: 1 }, { unique: true })
+db.places.createIndex({ place_id: 1 }, { unique: true })
 db.places.createIndex({ pos: "2dsphere" });
 db.places.insertMany([
   {
@@ -163,7 +163,8 @@ db.places.insertMany([
   },
 ]);
 
-//factsearhcer
+
+db.facts.createIndex({ fact_id: 1 }, { unique: true })
 db.facts.createIndex({ pos: "2dsphere" });
 db.facts.insertMany([
   {
@@ -310,8 +311,9 @@ db.facts.insertMany([
   },
 ]);
 
+db.quizzes.createIndex({ quiz_id: 1 }, { unique: true })
 db.quizzes.createIndex({ pos: "2dsphere" });
-db.quizzes.insert({
+db.quizzes.insertOne({
   quiz_id: "1",
   name: "Moscow center",
   questions: [
@@ -360,7 +362,8 @@ db.quizzes.insert({
   pos: { type: "Point", coordinates: [37.620795, 55.7539303] },
 });
 
-// media
+
+db.media.createIndex({ media_id: 1 }, { unique: true })
 db.media.createIndex({ pos: "2dsphere" });
 db.media.insertMany([
   {
