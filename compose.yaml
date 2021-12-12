@@ -45,14 +45,14 @@ services:
     networks:
       - backend
 
-  media:
-    image: ghcr.io/corona-travel/media:latest
-    command: uvicorn --host 0.0.0.0 --port 1234 media.app:app --root-path /media
-    environment:
-      MONGO_URL: mongodb://mongo/corona_travel
-      LOG_LEVEL: DEBUG
-    networks:
-      - backend
+#  media:
+#    image: ghcr.io/corona-travel/media:latest
+#    command: uvicorn --host 0.0.0.0 --port 1234 media.app:app --root-path /media
+#    environment:
+#      MONGO_URL: mongodb://mongo/corona_travel
+#      LOG_LEVEL: DEBUG
+#    networks:
+#      - backend
 
   places:
     image: ghcr.io/corona-travel/places:latest
@@ -72,4 +72,20 @@ services:
     networks:
       - backend
 
+  map_2d:
+    image: ghcr.io/corona-travel/map_2D:latest
+    environment:
+      LOG_LEVEL: DEBUG
+      PLACES_URL: http://places:1234/
+    networks:
+      - backend
 
+  map_3d:
+    image: ghcr.io/corona-travel/map_3D:latest
+    environment:
+      LOG_LEVEL: DEBUG
+      FACTS_URL: http://facts:1234/
+      MEDIA_URL: http://media:1234/
+      QUIZZES_URL: http://quizzes:1234/
+    networks:
+      - backend
