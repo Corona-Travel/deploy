@@ -91,3 +91,12 @@ services:
       QUIZZES_URL: http://quizzes:1234/
     networks:
       - backend
+
+  quiz_manager:
+    image: ghcr.io/corona-travel/quiz_manager:latest
+    command: uvicorn --host 0.0.0.0 --port 1234 quiz_manager.app:app --root-path /quiz_manager
+    environment:
+      QUIZZES_URL: http://quizzes:1234/
+      LOG_LEVEL: DEBUG
+    networks:
+      - backend
