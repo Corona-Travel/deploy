@@ -244,6 +244,7 @@ db.facts.insert({
   fact_id: "moscow_zaryadye",
   pos: {type: "Point", coordinates: [37.6287988, 55.7514578]},
 });
+
 //factsearcher
 db.facts.createIndex({ pos: "2dsphere" });
 db.facts.insert({
@@ -356,3 +357,11 @@ db.quizzes.insert({
   ],
   pos: {type: "Point", coordinates: [37.620795, 55.7539303]},
 });
+
+
+// media
+db.media.createIndex({ pos: "2dsphere" });
+db.media.insert({media_id: "red_sq_photo", name: "Red Square", type: "photo", pos: {type: "Point", coordinates: [37.5967391, 55.7446371]}, url: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.lonelyplanet.com%2Farticles%2Fmoscow-e2-80-99s-red-square&psig=AOvVaw0mznzK4RolAkwM1p7E5cE_&ust=1639402766684000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOii77Cx3vQCFQAAAAAdAAAAABAS"});
+db.media.insert({media_id: "gum_photo", name: "GUM", type: "photo", pos: {type: "Point", coordinates: [37.6215216, 55.7546967]}, url: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fgum.ru%2Fnews%2F7721635%2F15.06.2020%2F&psig=AOvVaw2Ezg_5YJ2dweQbZgzdHVHW&ust=1639402989493000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJDYh5qy3vQCFQAAAAAdAAAAABAD"});
+db.media.insert({media_id: "red_sq_video", name: "Red Square", type: "video", pos: {type: "Point", coordinates: [37.5967392, 55.7446371]}, url: "https://www.youtube.com/watch?v=jCcd_96P5BA"});
+db.media.insert({media_id: "gu_video", name: "GUM", type: "video", pos: {type: "Point", coordinates: [37.6215215, 55.7546967]}, url: "https://www.youtube.com/watch?v=GfwnH3ccEnc"});
