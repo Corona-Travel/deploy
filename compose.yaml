@@ -72,4 +72,20 @@ services:
     networks:
       - backend
 
+  map_2d:
+    image: ghcr.io/corona-travel/map_2D:latest
+    environment:
+      LOG_LEVEL: DEBUG
+      PLACES_URL: http://places:1234/
+    networks:
+      - backend
 
+  map_3d:
+    image: ghcr.io/corona-travel/map_3D:latest
+    environment:
+      LOG_LEVEL: DEBUG
+      FACTS_URL: http://facts:1234/
+      MEDIA_URL: http://media:1234/
+      QUIZZES_URL: http://quizzes:1234/
+    networks:
+      - backend
