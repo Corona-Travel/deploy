@@ -73,7 +73,8 @@ services:
       - backend
 
   map_2d:
-    image: ghcr.io/corona-travel/map_2D:latest
+    image: ghcr.io/corona-travel/map_2d:latest
+    command: uvicorn --host 0.0.0.0 --port 1234 map_2d.app:app --root-path /map_2d
     environment:
       LOG_LEVEL: DEBUG
       PLACES_URL: http://places:1234/
@@ -81,7 +82,8 @@ services:
       - backend
 
   map_3d:
-    image: ghcr.io/corona-travel/map_3D:latest
+    image: ghcr.io/corona-travel/map_3d:latest
+    command: uvicorn --host 0.0.0.0 --port 1234 map_3d.app:app --root-path /map_3d
     environment:
       LOG_LEVEL: DEBUG
       FACTS_URL: http://facts:1234/
