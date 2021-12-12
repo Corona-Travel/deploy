@@ -9,7 +9,7 @@ db.places.insertMany([
   {
     name: "Moscow",
     place_id: "moscow",
-    pos: { type: "Point", coordinates: [37.6195977, 55.7544836] },
+    pos: { type: "Point", coordinates: [37.618423, 55.751244] },
   },
   {
     name: "Madrid",
