@@ -21,20 +21,65 @@ services:
     networks:
       - backend
 
-  mongo:
+  mongo_facts:
     image: mongo:5
     networks:
       - backend
     volumes:
-      - "./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js"
+      - "./mongo-init-facts.js:/docker-entrypoint-initdb.d/mongo-init-facts.js"
     healthcheck:
-      test: echo 'db.runCommand("ping").ok' | mongo mongo:27017/corona_travel --quiet
+      test: echo 'db.runCommand("ping").ok' | mongo mongo_facts:27017/corona_travel --quiet
       interval: 10s
       timeout: 10s
       retries: 5
       start_period: 40s
     ports:
       - 27017:27017
+
+  mongo_places:
+    image: mongo:5
+    networks:
+      - backend
+    volumes:
+      - "./mongo-init-places.js:/docker-entrypoint-initdb.d/mongo-init-places.js"
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongo mongo_places:27017/corona_travel --quiet
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
+    ports:
+      - 27018:27018
+
+  mongo_media:
+    image: mongo:5
+    networks:
+      - backend
+    volumes:
+      - "./mongo-init-media.js:/docker-entrypoint-initdb.d/mongo-init-media.js"
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongo mongo_media:27017/corona_travel --quiet
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
+    ports:
+      - 27019:27019
+      
+  mongo_quizzes:
+    image: mongo:5
+    networks:
+      - backend
+    volumes:
+      - "./mongo-init-quizzes.js:/docker-entrypoint-initdb.d/mongo-init-quizzes.js"
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongo mongo_quizzes:27017/corona_travel --quiet
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
+    ports:
+      - 28017:28017
 
   facts:
     image: ghcr.io/corona-travel/facts:latest
