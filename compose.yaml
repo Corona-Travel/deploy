@@ -28,7 +28,7 @@ services:
     volumes:
       - "./mongo-init-facts.js:/docker-entrypoint-initdb.d/mongo-init-facts.js"
     healthcheck:
-      test: echo 'db.runCommand("ping").ok' | mongo mongo_facts:27017/corona_travel --quiet
+      test: echo 'db.runCommand("ping").ok' | mongo localhost:27017/corona_travel --quiet
       interval: 10s
       timeout: 10s
       retries: 5
@@ -43,13 +43,13 @@ services:
     volumes:
       - "./mongo-init-places.js:/docker-entrypoint-initdb.d/mongo-init-places.js"
     healthcheck:
-      test: echo 'db.runCommand("ping").ok' | mongo mongo_places:27017/corona_travel --quiet
+      test: echo 'db.runCommand("ping").ok' | mongo localhost:27017/corona_travel --quiet
       interval: 10s
       timeout: 10s
       retries: 5
       start_period: 40s
     ports:
-      - 27018:27018
+      - 27018:27017
 
   mongo_media:
     image: mongo:5
@@ -58,13 +58,13 @@ services:
     volumes:
       - "./mongo-init-media.js:/docker-entrypoint-initdb.d/mongo-init-media.js"
     healthcheck:
-      test: echo 'db.runCommand("ping").ok' | mongo mongo_media:27017/corona_travel --quiet
+      test: echo 'db.runCommand("ping").ok' | mongo localhost:27017/corona_travel --quiet
       interval: 10s
       timeout: 10s
       retries: 5
       start_period: 40s
     ports:
-      - 27019:27019
+      - 27019:27017
       
   mongo_quizzes:
     image: mongo:5
@@ -73,19 +73,19 @@ services:
     volumes:
       - "./mongo-init-quizzes.js:/docker-entrypoint-initdb.d/mongo-init-quizzes.js"
     healthcheck:
-      test: echo 'db.runCommand("ping").ok' | mongo mongo_quizzes:27017/corona_travel --quiet
+      test: echo 'db.runCommand("ping").ok' | mongo localhost:27017/corona_travel --quiet
       interval: 10s
       timeout: 10s
       retries: 5
       start_period: 40s
     ports:
-      - 28017:28017
+      - 27020:27017
 
   facts:
     image: ghcr.io/corona-travel/facts:latest
     command: uvicorn --host 0.0.0.0 --port 1234 facts.app:app --root-path /facts
     environment:
-      MONGO_URL: mongodb://mongo/corona_travel
+      MONGO_URL: mongodb://mongo_facts/corona_travel
       LOG_LEVEL: DEBUG
     networks:
       - backend
@@ -94,7 +94,7 @@ services:
     image: ghcr.io/corona-travel/media:latest
     command: uvicorn --host 0.0.0.0 --port 1234 media.app:app --root-path /media
     environment:
-      MONGO_URL: mongodb://mongo/corona_travel
+      MONGO_URL: mongodb://mongo_media/corona_travel
       LOG_LEVEL: DEBUG
     networks:
       - backend
@@ -103,7 +103,7 @@ services:
     image: ghcr.io/corona-travel/places:latest
     command: uvicorn --host 0.0.0.0 --port 1234 places.app:app --root-path /places
     environment:
-      MONGO_URL: mongodb://mongo/corona_travel
+      MONGO_URL: mongodb://mongo_places/corona_travel
       LOG_LEVEL: DEBUG
     networks:
       - backend
@@ -112,7 +112,7 @@ services:
     image: ghcr.io/corona-travel/quizzes:latest
     command: uvicorn --host 0.0.0.0 --port 1234 quizzes.app:app --root-path /quizzes
     environment:
-      MONGO_URL: mongodb://mongo/corona_travel
+      MONGO_URL: mongodb://mongo_quizzes/corona_travel
       LOG_LEVEL: DEBUG
     networks:
       - backend
