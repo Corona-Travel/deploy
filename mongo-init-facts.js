@@ -14,7 +14,7 @@ db.facts.insertMany([
   },
   {
     name: "Christ the Saviour Cathedral",
-    description: "The most important and the lergest cathedral in Russia",
+    description: "The most important and the largest cathedral in Russia",
     fact_id: "moscow_chr_sav_cath",
     pos: { type: "Point", coordinates: [37.6054939, 55.7446375] },
   },
