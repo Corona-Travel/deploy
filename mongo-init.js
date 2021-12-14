@@ -591,7 +591,7 @@ db.quizzes.insertOne({
       ],
     },
     {
-      question: "To which street is the proverb "A penny candle made all Moscow burn" associated?",
+      question: "To which street is the proverb \"A penny candle made all Moscow burn\" associated?",
       answers: [
         { option: "Arbat", correct: true },
         { option: "Ostozhenka", correct: false },
@@ -735,7 +735,7 @@ db.quizzes.insertOne({
       ],
     },
     {
-      question: "To whom the lines belong: "Moscow will always be the true capital of Russia"?",
+      question: "To whom the lines belong: \"Moscow will always be the true capital of Russia\"?",
       answers: [
         { option: "M.V. Lomonosov", correct: false },
         { option: "N.M. Karamzin", correct: true},
