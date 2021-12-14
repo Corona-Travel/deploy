@@ -910,13 +910,6 @@ db.media.insertMany([
     url: "https://www.youtube.com/watch?v=u2nY9MmlbvM",
   },
   {
-    media_id: "biblio-globus",
-    name: "Biblio Globus",
-    type: "video",
-    pos: { type: "Point", coordinates: [37.629739, 55.7583604] },
-    url: "https://www.youtube.com/watch?v=u2nY9MmlbvM",
-  },
-  {
     media_id: "zaryad",
     name: "Zaryadie park",
     type: "video",
