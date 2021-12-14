@@ -3,7 +3,7 @@ db = db.getSiblingDB("corona_travel");
 // сначала lng, потом lat
 // <field>: [<longitude>, <latitude>]
 
-db.places.createIndex({ place_id: 1 }, { unique: true })
+db.places.createIndex({ place_id: 1 }, { unique: true });
 db.places.createIndex({ pos: "2dsphere" });
 db.places.insertMany([
   {
@@ -163,8 +163,7 @@ db.places.insertMany([
   },
 ]);
 
-
-db.facts.createIndex({ fact_id: 1 }, { unique: true })
+db.facts.createIndex({ fact_id: 1 }, { unique: true });
 db.facts.createIndex({ pos: "2dsphere" });
 db.facts.insertMany([
   {
@@ -311,7 +310,7 @@ db.facts.insertMany([
   },
 ]);
 
-db.quizzes.createIndex({ quiz_id: 1 }, { unique: true })
+db.quizzes.createIndex({ quiz_id: 1 }, { unique: true });
 db.quizzes.createIndex({ pos: "2dsphere" });
 db.quizzes.insertOne({
   quiz_id: "1",
@@ -367,7 +366,7 @@ db.quizzes.insertOne({
   name: "Moscow history",
   questions: [
     {
-      question:        "When were the first written mentions about Moscow made?",
+      question: "When were the first written mentions about Moscow made?",
       answers: [
         { option: "In the XI century", correct: false },
         { option: "In the XII century", correct: true },
@@ -391,7 +390,8 @@ db.quizzes.insertOne({
       ],
     },
     {
-      question: "The only sculptured monument on the square is a bronze statue of:",
+      question:
+        "The only sculptured monument on the square is a bronze statue of:",
       answers: [
         { option: "Kuzma Minin and Dmitry Pozharsky", correct: true },
         { option: "Tsar Nicholas and Empress Alexandra", correct: false },
@@ -408,14 +408,14 @@ db.quizzes.insertOne({
     },
   ],
   pos: { type: "Point", coordinates: [37.619556, 55.754496] },
-}); 
+});
 
 db.quizzes.insertOne({
   quiz_id: "3",
   name: "Moscow government",
   questions: [
     {
-      question:      "When is the Constitution Day?",
+      question: "When is the Constitution Day?",
       answers: [
         { option: "November 7", correct: false },
         { option: "June 12", correct: true },
@@ -423,7 +423,8 @@ db.quizzes.insertOne({
       ],
     },
     {
-      question: "What are the three colors of the Russian flag from top to bottom?",
+      question:
+        "What are the three colors of the Russian flag from top to bottom?",
       answers: [
         { option: "red, blue, white", correct: false },
         { option: "white, blue, red", correct: true },
@@ -439,7 +440,8 @@ db.quizzes.insertOne({
       ],
     },
     {
-      question: "What is the lower house of the bi-cameral Russian parliament called?",
+      question:
+        "What is the lower house of the bi-cameral Russian parliament called?",
       answers: [
         { option: "Duma", correct: true },
         { option: "Parliament", correct: false },
@@ -449,9 +451,18 @@ db.quizzes.insertOne({
     {
       question: "Moscow was named after...",
       answers: [
-        { option: "The Moskva river, which runs through the centre", correct: true },
-        { option: "The Moskva army commanded by Prince Yuri Dolgorukiy", correct: false },
-        { option: "The Moskva wall built after the Mongol invasion in 1238", correct: false },
+        {
+          option: "The Moskva river, which runs through the centre",
+          correct: true,
+        },
+        {
+          option: "The Moskva army commanded by Prince Yuri Dolgorukiy",
+          correct: false,
+        },
+        {
+          option: "The Moskva wall built after the Mongol invasion in 1238",
+          correct: false,
+        },
       ],
     },
   ],
@@ -463,7 +474,8 @@ db.quizzes.insertOne({
   name: "Moscow streets",
   questions: [
     {
-      question:        "What was the name of the oldest street in Moscow whose name has survived in history?",
+      question:
+        "What was the name of the oldest street in Moscow whose name has survived in history?",
       answers: [
         { option: "Tverskaya", correct: false },
         { option: "Borovitskaya", correct: true },
@@ -487,7 +499,8 @@ db.quizzes.insertOne({
       ],
     },
     {
-      question: "How many streets does Moscow include (taking into account New Moscow streets)?",
+      question:
+        "How many streets does Moscow include (taking into account New Moscow streets)?",
       answers: [
         { option: "Around 4800", correct: true },
         { option: "Around 5500", correct: false },
@@ -495,7 +508,8 @@ db.quizzes.insertOne({
       ],
     },
     {
-      question: "Which of the city's central streets was called Rozhdestvenskaya in the 16th-17th centuries?",
+      question:
+        "Which of the city's central streets was called Rozhdestvenskaya in the 16th-17th centuries?",
       answers: [
         { option: "Stoleshnikov Lane", correct: true },
         { option: "Leninsky Prospect", correct: false },
@@ -511,7 +525,7 @@ db.quizzes.insertOne({
   name: "Moscow the most ...",
   questions: [
     {
-      question:        "Who is the biggest monument in Moscow?",
+      question: "Who is the biggest monument in Moscow?",
       answers: [
         { option: "Yuri Gagarin", correct: false },
         { option: "Peter The Grate", correct: true },
@@ -535,7 +549,8 @@ db.quizzes.insertOne({
       ],
     },
     {
-      question: "Which city is connected to Moscow by the longest straight stretch of railway in Russia?",
+      question:
+        "Which city is connected to Moscow by the longest straight stretch of railway in Russia?",
       answers: [
         { option: "St Petersburg", correct: true },
         { option: "Kaliningrad", correct: false },
@@ -543,7 +558,8 @@ db.quizzes.insertOne({
       ],
     },
     {
-      question: "Where in Moscow can you see the most monuments and sculptures in the open air?",
+      question:
+        "Where in Moscow can you see the most monuments and sculptures in the open air?",
       answers: [
         { option: "The Museon Park", correct: true },
         { option: "The Kremlin", correct: false },
@@ -551,7 +567,7 @@ db.quizzes.insertOne({
       ],
     },
   ],
-  pos: { type: "Point", coordinates: [37.610932, 55.737108, ] },
+  pos: { type: "Point", coordinates: [37.610932, 55.737108] },
 });
 
 db.quizzes.insertOne({
@@ -591,7 +607,8 @@ db.quizzes.insertOne({
       ],
     },
     {
-      question: "To which street is the proverb \"A penny candle made all Moscow burn\" associated?",
+      question:
+        'To which street is the proverb "A penny candle made all Moscow burn" associated?',
       answers: [
         { option: "Arbat", correct: true },
         { option: "Ostozhenka", correct: false },
@@ -623,7 +640,8 @@ db.quizzes.insertOne({
       ],
     },
     {
-      question: "Which bronze figure adorns the Bolshoi Theatre and is a symbol of this work of architecture?",
+      question:
+        "Which bronze figure adorns the Bolshoi Theatre and is a symbol of this work of architecture?",
       answers: [
         { option: "Rotunda", correct: false },
         { option: "Pyramid", correct: false },
@@ -655,7 +673,8 @@ db.quizzes.insertOne({
   name: "Moscow facts",
   questions: [
     {
-      question: "Moscow is one of the world's top ten cities in terms of population. Approximately how many people live in Moscow in 2017?",
+      question:
+        "Moscow is one of the world's top ten cities in terms of population. Approximately how many people live in Moscow in 2017?",
       answers: [
         { option: "10-13 million", correct: false },
         { option: "12-17 million", correct: true },
@@ -663,7 +682,8 @@ db.quizzes.insertOne({
       ],
     },
     {
-      question: "When it was built, Ostankino Tower was the tallest building in the world. Nowadays it is already on the 10th height after several skyscrapers and TV towers. How many meters tall is the Ostankino Tower?",
+      question:
+        "When it was built, Ostankino Tower was the tallest building in the world. Nowadays it is already on the 10th height after several skyscrapers and TV towers. How many meters tall is the Ostankino Tower?",
       answers: [
         { option: "700 m", correct: false },
         { option: "540 m", correct: true },
@@ -671,7 +691,8 @@ db.quizzes.insertOne({
       ],
     },
     {
-      question: "In pagan times, the place where the Moscow Kremlin stands now was called the Witcher's Mountain, where the temple was located. What is the name of the hill in the centre of Moscow nowadays?",
+      question:
+        "In pagan times, the place where the Moscow Kremlin stands now was called the Witcher's Mountain, where the temple was located. What is the name of the hill in the centre of Moscow nowadays?",
       answers: [
         { option: "Spassky", correct: false },
         { option: "Tsarsky", correct: false },
@@ -687,7 +708,8 @@ db.quizzes.insertOne({
       ],
     },
     {
-      question: "Only the fourth generation of people living permanently in Moscow can be considered native Muscovites. How many indigenous Muscovites are there in the city at the moment?",
+      question:
+        "Only the fourth generation of people living permanently in Moscow can be considered native Muscovites. How many indigenous Muscovites are there in the city at the moment?",
       answers: [
         { option: "3%", correct: true },
         { option: "7%", correct: false },
@@ -735,10 +757,11 @@ db.quizzes.insertOne({
       ],
     },
     {
-      question: "To whom the lines belong: \"Moscow will always be the true capital of Russia\"?",
+      question:
+        'To whom the lines belong: "Moscow will always be the true capital of Russia"?',
       answers: [
         { option: "M.V. Lomonosov", correct: false },
-        { option: "N.M. Karamzin", correct: true},
+        { option: "N.M. Karamzin", correct: true },
         { option: "G.R. Derzhavin", correct: false },
       ],
     },
@@ -767,15 +790,19 @@ db.quizzes.insertOne({
       ],
     },
     {
-      question: "Which building was chosen as the first building for Moscow University?",
+      question:
+        "Which building was chosen as the first building for Moscow University?",
       answers: [
         { option: "In a building on Mokhovaya Street", correct: false },
         { option: "The house where Lomonosov lived", correct: false },
-        { option: "The building of the Historical Museum on Red Square", correct: true },
+        {
+          option: "The building of the Historical Museum on Red Square",
+          correct: true,
+        },
       ],
     },
     {
-      question: "What was the original faculty of the university?", 
+      question: "What was the original faculty of the university?",
       answers: [
         { option: "philosophy faculty", correct: true },
         { option: "linguistics department", correct: false },
@@ -783,7 +810,8 @@ db.quizzes.insertOne({
       ],
     },
     {
-      question: "How many faculties are operating at Lomonosov Moscow State University nowadays?",
+      question:
+        "How many faculties are operating at Lomonosov Moscow State University nowadays?",
       answers: [
         { option: "41", correct: true },
         { option: "38", correct: false },
@@ -794,7 +822,7 @@ db.quizzes.insertOne({
   pos: { type: "Point", coordinates: [37.535227, 55.705297] },
 });
 
-db.media.createIndex({ media_id: 1 }, { unique: true })
+db.media.createIndex({ media_id: 1 }, { unique: true });
 db.media.createIndex({ pos: "2dsphere" });
 db.media.insertMany([
   {
@@ -829,77 +857,77 @@ db.media.insertMany([
     media_id: "lobn_video",
     name: "Lobnoe mesto",
     type: "video",
-    pos: { type: "Point", coordinates: [37.6225886, 55.7532491] }, 
+    pos: { type: "Point", coordinates: [37.6225886, 55.7532491] },
     url: "https://www.youtube.com/watch?v=VIn5alKa6Yk",
   },
   {
     media_id: "spas_video",
     name: "Spasskaya tower",
     type: "video",
-    pos: { type: "Point", coordinates: [37.621828, 55.752708] }, 
+    pos: { type: "Point", coordinates: [37.621828, 55.752708] },
     url: "https://www.youtube.com/watch?v=c0mtdU6wV3I",
   },
   {
     media_id: "gostinyy_dvor",
     name: "Gostinnyy Dvor",
     type: "photo",
-    pos: { type: "Point", coordinates: [37.623925, 55.754277] },  
+    pos: { type: "Point", coordinates: [37.623925, 55.754277] },
     url: "http://www.robertodemicheli.com/album_test/index.html?folder=Architecture/&file=IMG_2060.jpg",
   },
   {
     media_id: "ploshad_rev",
     name: "Ploshad Revolutsii",
     type: "photo",
-    pos: { type: "Point", coordinates: [37.6218699, 55.7565575] },  
+    pos: { type: "Point", coordinates: [37.6218699, 55.7565575] },
     url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Ploshchad_revolyutsii_Metro_2010.jpg/1280px-Ploshchad_revolyutsii_Metro_2010.jpg",
   },
   {
     media_id: "bolsh_theat",
     name: "Bolshoi theatre",
     type: "video",
-    pos: { type: "Point", coordinates: [37.619085, 55.759611] },  
+    pos: { type: "Point", coordinates: [37.619085, 55.759611] },
     url: "https://www.youtube.com/watch?v=uE2fjFMag7E",
   },
   {
     media_id: "cafe_sobr",
     name: "Cafe_Sobranie",
     type: "photo",
-    pos: { type: "Point", coordinates: [37.6172352, 55.758649] },  
+    pos: { type: "Point", coordinates: [37.6172352, 55.758649] },
     url: "https://www.sobranierf.ru/upload/medialibrary/cf9/cf98d21ea3efa0e2b2ac6cb856d747d3.png",
   },
   {
     media_id: "cdm",
     name: "Central children's store",
     type: "photo",
-    pos: { type: "Point", coordinates: [37.624407, 55.759574] },  
+    pos: { type: "Point", coordinates: [37.624407, 55.759574] },
     url: "https://mos-holidays.ru/wp-content/uploads/2020/07/centralnyi-detskiy-mir-1.jpg",
   },
   {
     media_id: "biblio-globus",
     name: "Biblio Globus",
     type: "video",
-    pos: { type: "Point", coordinates: [37.629739, 55.7583604] },  
+    pos: { type: "Point", coordinates: [37.629739, 55.7583604] },
     url: "https://www.youtube.com/watch?v=u2nY9MmlbvM",
   },
   {
     media_id: "biblio-globus",
     name: "Biblio Globus",
     type: "video",
-    pos: { type: "Point", coordinates: [37.629739, 55.7583604] },  
+    pos: { type: "Point", coordinates: [37.629739, 55.7583604] },
     url: "https://www.youtube.com/watch?v=u2nY9MmlbvM",
   },
   {
     media_id: "zaryad",
     name: "Zaryadie park",
     type: "video",
-    pos: { type: "Point", coordinates: [37.624280, 55.752072] },  
+    pos: { type: "Point", coordinates: [37.62428, 55.752072] },
     url: "https://www.youtube.com/watch?v=vnShcoOxx4Y",
   },
   {
     media_id: "kolch_shop",
     name: "Kolchuga shop",
     type: "photo",
-    pos: { type: "Point", coordinates: [37.6276069, 55.7528956] },  
+    pos: { type: "Point", coordinates: [37.6276069, 55.7528956] },
     url: "https://retaildesignblog.net/wp-content/uploads/2013/12/Kolchugas-Weapons-Salon-by-ARCHPOINT-Moscow-Russia.jpg",
   },
 ]);
