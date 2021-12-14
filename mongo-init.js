@@ -313,7 +313,7 @@ db.facts.insertMany([
 db.quizzes.createIndex({ quiz_id: 1 }, { unique: true });
 db.quizzes.createIndex({ pos: "2dsphere" });
 db.quizzes.insertOne({
-  quiz_id: "1",
+  quiz_id: "mscw_c",
   name: "Moscow center",
   questions: [
     {
@@ -362,7 +362,7 @@ db.quizzes.insertOne({
 });
 
 db.quizzes.insertOne({
-  quiz_id: "2",
+  quiz_id: "mscw_h",
   name: "Moscow history",
   questions: [
     {
@@ -412,7 +412,7 @@ db.quizzes.insertOne({
 
 db.quizzes.insertOne({
   quiz_id: "3",
-  name: "Moscow government",
+  name: "mscw_g",
   questions: [
     {
       question: "When is the Constitution Day?",
@@ -471,7 +471,7 @@ db.quizzes.insertOne({
 
 db.quizzes.insertOne({
   quiz_id: "4",
-  name: "Moscow streets",
+  name: "mscw_s",
   questions: [
     {
       question:
@@ -521,7 +521,7 @@ db.quizzes.insertOne({
 });
 
 db.quizzes.insertOne({
-  quiz_id: "5",
+  quiz_id: "mscw_the_most",
   name: "Moscow the most ...",
   questions: [
     {
@@ -571,7 +571,7 @@ db.quizzes.insertOne({
 });
 
 db.quizzes.insertOne({
-  quiz_id: "6",
+  quiz_id: "mscw_sights",
   name: "Moscow sights",
   questions: [
     {
@@ -620,7 +620,7 @@ db.quizzes.insertOne({
 });
 
 db.quizzes.insertOne({
-  quiz_id: "7",
+  quiz_id: "mscw_bt",
   name: "Moscow Bolshoi Theatre",
   questions: [
     {
@@ -669,7 +669,7 @@ db.quizzes.insertOne({
 });
 
 db.quizzes.insertOne({
-  quiz_id: "8",
+  quiz_id: "mscw_facts",
   name: "Moscow facts",
   questions: [
     {
@@ -721,7 +721,7 @@ db.quizzes.insertOne({
 });
 
 db.quizzes.insertOne({
-  quiz_id: "9",
+  quiz_id: "rus_lib",
   name: "Russian librirary",
   questions: [
     {
@@ -770,7 +770,7 @@ db.quizzes.insertOne({
 });
 
 db.quizzes.insertOne({
-  quiz_id: "10",
+  quiz_id: "mgu_q",
   name: "MGU ",
   questions: [
     {
