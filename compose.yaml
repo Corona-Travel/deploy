@@ -154,5 +154,3 @@ services:
       LOG_LEVEL: DEBUG
     networks:
       - backend
-    # ports:
-    #   - 27020:27017
