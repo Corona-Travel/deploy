@@ -65,7 +65,7 @@ services:
       start_period: 40s
     ports:
       - 27019:27017
-      
+
   mongo_quizzes:
     image: mongo:5
     networks:
@@ -142,6 +142,15 @@ services:
     command: uvicorn --host 0.0.0.0 --port 1234 quiz_manager.app:app --root-path /quiz_manager
     environment:
       QUIZZES_URL: http://quizzes:1234/
+      LOG_LEVEL: DEBUG
+    networks:
+      - backend
+
+  fact_searcher:
+    image: ghcr.io/corona-travel/fact_searcher:latest
+    command: uvicorn --host 0.0.0.0 --port 1234 fact_searcher.app:app --root-path /fact_searcher
+    environment:
+      FACTS_URL: http://facts:1234/
       LOG_LEVEL: DEBUG
     networks:
       - backend
