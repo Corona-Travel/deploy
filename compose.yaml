@@ -5,6 +5,7 @@ networks:
 services:
   front:
     image: ghcr.io/corona-travel/ctf:latest
+    command: pnpm run dev
     networks:
       - frontend
       - backend
