@@ -13,6 +13,8 @@ services:
     environment:
       NEXT_PUBLIC_GMAP_KEY: $NEXT_PUBLIC_GMAP_KEY
       NEXT_PUBLIC_API_URL: $NEXT_PUBLIC_API_URL
+    volumes:
+      - "./.env.local:/ctc/.env.local:z"
 
   nginx:
     image: nginx:1.21
